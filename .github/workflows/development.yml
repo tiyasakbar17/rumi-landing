@@ -35,3 +35,6 @@ jobs:
           server-dir: /
           protocol: ftps
           timeout: 300000  # Set a longer timeout value in milliseconds (here, 2 minutes)
+          exclude: |
+            **/.git*
+            **/.git*/**

@@ -2,7 +2,7 @@ name: 🚀 Deploy File to cPanel
 on:
   push:
     branches:
-      - development
+      - master
 jobs:
   FTP-Deploy-Action:
     name: 🎉 Deploy

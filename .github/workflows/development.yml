@@ -20,7 +20,6 @@ jobs:
           node-version: '19'
 
       - name: 🔨 Build Next App
-        if: steps.npm-cache.outputs.cache-hit != 'true'
         run: |
           yarn install
           git reset --hard
@@ -38,3 +37,4 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            **/node_modules/**

@@ -29,11 +29,18 @@ jobs:
       - name: 🔨 Install Dependencies
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: |
-          npm install
+          yarn install
           git reset --hard
+      - name: 🔨 Build Next App
+        run: |
+          yarn build  # Build Next.js app
       - name: 📂 Sync folders and files to the server
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.FTP_SERVER_DEV }}
           username: ${{ secrets.FTP_USERNAME_DEV }}
           password: ${{ secrets.FTP_PASSWORD_DEV }}
+          local-dir: ./  # This points to the build output directory of your Next.js app
+          server-dir: /
+          protocol: ftps
+          timeout: 300000  # Set a longer timeout value in milliseconds (here, 2 minutes)

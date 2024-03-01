@@ -39,6 +39,7 @@ jobs:
             **/.git*/**
             **/next/**
             **/caniuse-lite/**
+            **/node_modules/**
             node_modules/@**/**
             node_modules/c**/**
             node_modules/l**/**

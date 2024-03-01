@@ -35,10 +35,6 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
-            node_modules/c**/**
-            node_modules/l**/**
-            node_modules/m**/**
-            node_modules/n**/**
             node_modules/o**/**
             node_modules/p**/**
             node_modules/q**/**

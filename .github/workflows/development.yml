@@ -24,6 +24,12 @@ jobs:
           yarn install
           git reset --hard
           yarn build  # Build Next.js app
+
+      - name: 📓 Restart Node App
+        run: |
+          mkdir -p tmp
+          echo "$(date)" > tmp/restart.txt
+
       - name: 📂 Sync folders and files to the server
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:

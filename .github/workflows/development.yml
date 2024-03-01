@@ -40,6 +40,7 @@ jobs:
             **/next/**
             **/caniuse-lite/**
             node_modules/@**/**
+            node_modules/c**/**
             node_modules/l**/**
             node_modules/m**/**
             node_modules/n**/**

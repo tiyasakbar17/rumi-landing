@@ -17,7 +17,7 @@ jobs:
       - name: Use Node.js 19
         uses: actions/setup-node@v3
         with:
-          node-version: '19'
+          node-version: "19"
 
       - name: 🔨 Build Next App
         run: |
@@ -36,7 +36,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER_DEV }}
           username: ${{ secrets.FTP_USERNAME_DEV }}
           password: ${{ secrets.FTP_PASSWORD_DEV }}
-          local-dir: ./  # This points to the build output directory of your Next.js app
+          local-dir: ./ # This points to the build output directory of your Next.js app
           server-dir: /
           exclude: |
             **/.git*

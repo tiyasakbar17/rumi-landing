@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,6 +24,45 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+@layer base {
+  :root {
+    --primary: 24 192 255;
+    --secondary: 224 247 255;
+    --tertiary: 252 181 2;
+    --quarternary: 247 43 96;
+  }
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-medium;
+  }
+  h4 {
+    @apply text-2xl font-medium;
+  }
+  h5 {
+    @apply text-xl font-medium;
+  }
+  h6 {
+    @apply text-lg font-medium;
+  }
+}
+
+@layer components {
+  .caption {
+    @apply text-xs text-gray-700;
+  }
+  .card-3d {
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+  }
 }
 
 @layer utilities {

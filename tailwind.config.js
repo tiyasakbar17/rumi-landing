@@ -12,6 +12,15 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        roboto: ["var(--font-roboto)"],
+      },
+      colors: {
+        primary: "rgb(var(--primary))",
+        secondary: "rgb(var(--secondary))",
+        tertiary: "rgb(var(--tertiary))",
+        quarternary: "rgb(var(--quarternary))",
+      },
     },
   },
   plugins: [],

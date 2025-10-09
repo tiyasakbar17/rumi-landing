@@ -19,8 +19,9 @@ export function MockedList() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data: { items: { id: number; name: string }[] } = await res.json();
       setItems(data.items);
-    } catch (e: any) {
-      setError(e?.message ?? "Failed to load");
+    } catch (e: unknown) {
+      const message = e instanceof Error ? e.message : "Failed to load";
+      setError(message);
     } finally {
       setLoading(false);
     }

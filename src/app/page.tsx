@@ -1,103 +1,190 @@
 import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+
+export const dynamic = "force-static";
+export const metadata = {
+  title: "Rumah Inggris: Jalan Tenang Mencapai Skor TOEFL Tinggi",
+  description:
+    "Bosan dengan belajar TOEFL yang penuh tekanan? Rumah Inggris menawarkan platform terstruktur dan komunitas suportif untuk membantu Anda meraih skor impian dengan tenang dan percaya diri.",
+};
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      {/* 1. Navigation handled globally. Hero: The Promise of Calm */}
+      <section aria-label="Janji ketenangan" className="relative w-full md:min-h-[calc(100vh-80px)] flex items-center justify-center">
+        {/* Full-bleed background image only on md+ to prevent blocking mobile */}
+        <div className="hidden md:block absolute inset-0 z-0">
+          <Image
+            src="/hero.svg"
+            alt="Siswa belajar TOEFL dengan tenang di lingkungan Rumah Inggris yang nyaman"
+            fill
+            priority
+            className="object-cover object-[50%_0%] opacity-90"
+          />
+          <div className="absolute inset-0 bg-background/15" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="relative z-10 container-ri text-center py-14 md:py-16">
+          <div className="max-w-[800px] mx-auto">
+            <h1 className="text-[32px] sm:text-[36px] md:text-[64px] leading-[1.2] font-bold text-foreground mb-6">
+              Jalan Tenang Menuju Skor TOEFL Impian Anda.
+            </h1>
+            <p className="text-[16px] md:text-[18px] leading-[1.7] text-foreground mb-10 md:mb-12 max-w-[600px] mx-auto">
+              Platform belajar terstruktur dan komunitas suportif kami dirancang untuk membangun
+              kepercayaan diri, bukan tekanan.
+            </p>
+            <div className="flex justify-center">
+              <Button
+                size="lg"
+                className="w-full md:w-auto min-w-[220px] md:min-w-[320px] py-4 px-8 rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-transform"
+              >
+                Coba Tes Diagnostik Gratis
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Problem: We Understand Your Struggle */}
+      <section className="w-full">
+        <div className="container-ri text-center py-[64px] md:py-[120px]">
+          <h2 className="text-[48px] leading-[1.3] font-bold text-foreground mb-8">
+            Pernah Merasa Kewalahan Belajar TOEFL Sendiri?
+          </h2>
+          <div className="mx-auto max-w-[800px]">
+            <p className="text-[18px] leading-[1.7] text-foreground max-w-[700px] mx-auto mb-12">
+              Kami mengerti. Antara tumpukan buku, aplikasi yang membingungkan, dan tekanan untuk berhasil,
+              mudah sekali merasa cemas dan kehilangan arah. Anda tidak sendirian dalam perjuangan ini.
+            </p>
+            {/* Subtle Padi wave separator */}
+            <div className="mt-12 flex justify-center" aria-hidden>
+              <svg width="160" height="12" viewBox="0 0 160 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 6 C 20 0, 40 12, 60 6 S 100 0, 120 6 S 140 12, 160 6" stroke="currentColor" strokeWidth="2" className="text-padi" fill="none"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Solution: Your Sanctuary for Success */}
+      <section className="w-full">
+        <div className="container-ri py-[64px] md:py-[120px] space-y-4">
+          <h2 className="text-2xl md:text-3xl font-semibold">Rumah Inggris: Pembelajaran Terstruktur, Kepercayaan Diri yang Hakiki.</h2>
+          <p className="text-foreground/80 max-w-3xl">
+          Melalui pendekatan yang teratur, dukungan mentor, dan komunitas yang peduli, kami membantu Anda
+          membangun kejelasan langkah—dari diagnosis kebutuhan hingga pencapaian skor. Fokus kami adalah
+          ketenangan dan kemajuan yang konsisten.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. How It Works: Your Simple Path Forward */}
+      <section className="w-full">
+        <div className="container-ri py-[64px] md:py-[120px] space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold">Bagaimana Cara Kami Membantu Anda Mencapai Skor Impian?</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            <Card padding="lg">
+              <CardHeader className="mb-3">
+                <CardTitle>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-padi/40 text-foreground">🔎</span>
+                  <span className="ml-2 align-middle">Diagnose</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/80">
+                  Mulai dengan Tes Diagnostik Gratis kami untuk menemukan kekuatan dan peluang Anda.
+                </p>
+              </CardContent>
+            </Card>
+            <Card padding="lg">
+              <CardHeader className="mb-3">
+                <CardTitle>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-padi/40 text-foreground">📖</span>
+                  <span className="ml-2 align-middle">Learn</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/80">
+                  Ikuti modul pembelajaran yang dipersonalisasi, fokus pada area yang paling Anda butuhkan.
+                </p>
+              </CardContent>
+            </Card>
+            <Card padding="lg">
+              <CardHeader className="mb-3">
+                <CardTitle>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-padi/40 text-foreground">🎓</span>
+                  <span className="ml-2 align-middle">Achieve</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/80">
+                  Bangun kepercayaan diri, tingkatkan skor Anda, dan raih tujuan akademik atau karier Anda.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Our Unfair Advantage: More Than an App, a Home */}
+      <section className="w-full">
+        <div className="container-ri py-[64px] md:py-[120px] grid gap-6 md:grid-cols-2 md:items-center">
+          <div>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/dorm1.svg"
+            alt="Ruang belajar dorm Rumah Inggris yang hangat dan nyaman"
+            width={700}
+            height={450}
+            className="w-full h-auto rounded-xl border border-teak/30"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-semibold">Bukan Sekedar Aplikasi, Kami Adalah Rumah Inggris.</h2>
+            <p className="text-foreground/80">
+              Dapatkan dukungan yang Anda butuhkan—online dan offline—di lingkungan yang benar-benar peduli.
+              Kombinasi komunitas, mentor, dan fasilitas dorm menciptakan rasa tenang untuk belajar mendalam.
+            </p>
+            <div>
+              <Button variant="secondary">Jelajahi Dorm Kami</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Testimonials: Hear From Those Who Found Their Calm */}
+      <section className="w-full">
+        <div className="container-ri py-[64px] md:py-[120px] space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold">Kisah Sukses dari Komunitas Kami.</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {[1,2,3].map((i) => (
+              <Card key={i} padding="lg">
+                <CardContent>
+                  <figure className="space-y-3">
+                    <blockquote className="text-foreground/80">
+                      “Rumah Inggris membantu saya lebih tenang dan fokus. Skor saya naik signifikan tanpa rasa tertekan.”
+                    </blockquote>
+                    <figcaption className="text-sm text-foreground/60">Rini · Pencapaian TOEFL 600+</figcaption>
+                  </figure>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Final CTA: Your Journey Starts Here */}
+      <section className="w-full">
+        <div className="container-ri py-[64px] md:py-[120px] text-center space-y-4">
+          <h2 className="text-2xl md:text-3xl font-semibold">Siap Memulai Perjalanan Anda Menuju Skor TOEFL Impian?</h2>
+          <p className="text-foreground/80 max-w-2xl mx-auto">
+            Dapatkan analisis pribadi Anda dan langkah pertama yang jelas hari ini.
+          </p>
+          <div className="pt-2">
+            <Button size="lg" className="min-w-[260px]">Coba Tes Diagnostik Gratis</Button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

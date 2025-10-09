@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Rumah Inggris Palette */
+  /* Primary foundation */
+  --parchment: #F8F6F2; /* main background */
+  --charcoal: #3D4045; /* body text, headlines */
+
+  /* Secondary brand personality */
+  --padi: #A2B9A1; /* secondary bg, accents, progress */
+  --teak: #BE9A78; /* borders, dividers, subtle highlights */
+
+  /* Accent CTA */
+  --terracotta: #D97C5D; /* primary CTA */
+
+  /* Map to generic tokens used across the app */
+  --background: var(--parchment);
+  --foreground: var(--charcoal);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-padi: var(--padi);
+  --color-teak: var(--teak);
+  --color-terracotta: var(--terracotta);
+  --font-sans: var(--font-plus-jakarta);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* No automatic dark mode override for MVP — stay in brand light theme */
+
+html, body {
+  min-height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Layout utilities */
+.container-ri {
+  max-width: 1140px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* Spacing helpers (multiples of 8px) when precise values are needed */
+.space-120-y { padding-top: 120px; padding-bottom: 120px; }

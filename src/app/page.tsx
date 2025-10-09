@@ -22,15 +22,15 @@ export default function Home() {
         {/* Full-bleed background image only on md+ to prevent blocking mobile */}
         <div className="hidden md:block absolute inset-0 z-0">
           <Image
-            src="/hero.svg"
+            src="/dashboard-hero.png"
             alt="Siswa belajar TOEFL dengan tenang di lingkungan Rumah Inggris yang nyaman"
             fill
             priority
             className="object-cover object-[50%_0%] opacity-90"
           />
-          <div className="absolute inset-0 bg-background/15" />
+          <div className="absolute inset-0 bg-background/50" />
         </div>
-        <div className="relative z-10 container-ri text-center py-14 md:py-16">
+        <div className="relative z-10 container-ri text-center py-14 md:py-16 pt-[10%]!">
           <div className="max-w-[800px] mx-auto">
             <h1 className="text-[32px] sm:text-[36px] md:text-[64px] leading-[1.2] font-bold text-foreground mb-6">
               Raih Skor TOEFL Impian Anda dengan Lebih Tenang dan Percaya Diri.
@@ -191,22 +191,22 @@ export default function Home() {
             {/* Mobile: stacked cleanly */}
             <div className="md:hidden space-y-4">
               <Image
-                src="/dorm1.svg"
-                alt="Ruang belajar dorm Rumah Inggris yang hangat dan nyaman"
+                src="/study1.jpg"
+                alt="Ruang belajar asrama Rumah Inggris yang hangat dan nyaman"
                 width={1000}
                 height={640}
                 className="w-full h-auto rounded-xl border border-teak/30 object-cover"
               />
               <div className="grid grid-cols-2 gap-4">
                 <Image
-                  src="/dorm2.svg"
-                  alt="Sudut baca yang nyaman di dorm Rumah Inggris"
+                  src="/study-room.jpg"
+                  alt="Sudut baca yang nyaman di asrama Rumah Inggris"
                   width={500}
                   height={360}
                   className="w-full h-auto rounded-xl border border-teak/30 object-cover"
                 />
                 <Image
-                  src="/dorm3.svg"
+                  src="/kitchen.jpg"
                   alt="Kebersamaan komunitas belajar di Rumah Inggris"
                   width={500}
                   height={360}
@@ -222,7 +222,7 @@ export default function Home() {
                 <div className="h-full rounded-xl border border-teak/30 overflow-hidden shadow-[0_12px_32px_rgba(0,0,0,0.08)] rotate-[0.75deg]">
                   <Image
                     src="/study1.jpg"
-                    alt="Ruang belajar dorm Rumah Inggris yang hangat dan nyaman"
+                    alt="Ruang belajar asrama Rumah Inggris yang hangat dan nyaman"
                     fill
                     priority
                     className="object-cover"
@@ -234,7 +234,7 @@ export default function Home() {
                 <div className="aspect-[16/9] rounded-xl border border-teak/30 overflow-hidden shadow-[0_12px_32px_rgba(0,0,0,0.12)] -rotate-[1.25deg]">
                   <Image
                     src="/study-room.jpg"
-                    alt="Sudut baca yang nyaman di dorm Rumah Inggris"
+                    alt="Sudut baca yang nyaman di asrama Rumah Inggris"
                     fill
                     className="object-cover"
                   />

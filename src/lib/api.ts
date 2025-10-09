@@ -1,7 +1,7 @@
 export type ApiOptions = {
   method?: string;
   headers?: Record<string, string>;
-  body?: any;
+  body?: unknown;
   cache?: RequestCache;
   next?: NextFetchRequestConfig;
 };
@@ -13,13 +13,15 @@ export async function fetchJson<T = unknown>(path: string, options: ApiOptions =
   const url = path.startsWith("http") ? path : `${BASE_URL}${path}`;
   const { body, headers, method = body ? "POST" : "GET", cache, next } = options;
 
+  const requestBody = body == null ? undefined : (typeof body === "string" ? body : JSON.stringify(body));
+
   const res = await fetch(url, {
     method,
     headers: {
       "Content-Type": "application/json",
       ...(headers ?? {}),
     },
-    body: body != null ? JSON.stringify(body) : undefined,
+    body: requestBody as BodyInit | undefined,
     cache,
     next,
   } as RequestInit);

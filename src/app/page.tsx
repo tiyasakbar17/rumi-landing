@@ -1,20 +1,24 @@
-import Image from "next/image";
-import { Reveal } from "@/components/animations/Reveal";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Reveal } from '@/components/animations/Reveal';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
 
-export const dynamic = "force-static";
+export const dynamic = 'force-static';
 export const metadata = {
-  title: "Rumah Inggris: Jalan Tenang Mencapai Skor TOEFL Tinggi",
+  title: 'Rumah Inggris: Jalan Tenang Mencapai Skor TOEFL Tinggi',
   description:
-    "Bosan dengan belajar TOEFL yang penuh tekanan? Rumah Inggris menawarkan platform terstruktur dan komunitas suportif untuk membantu Anda meraih skor impian dengan tenang dan percaya diri.",
+    'Bosan dengan belajar TOEFL yang penuh tekanan? Rumah Inggris menawarkan platform terstruktur dan komunitas suportif untuk membantu Anda meraih skor impian dengan tenang dan percaya diri.',
 };
 
 export default function Home() {
   return (
     <div>
       {/* 1. Navigation handled globally. Hero: The Promise of Calm */}
-      <section aria-label="Janji ketenangan" className="relative w-full md:min-h-[calc(100vh-80px)] flex items-center justify-center">
+      <section
+        aria-label="Janji ketenangan"
+        className="relative w-full md:max-h-[calc(100vh-100px)] md:min-h-[calc(100vh-100px)]"
+      >
         {/* Full-bleed background image only on md+ to prevent blocking mobile */}
         <div className="hidden md:block absolute inset-0 z-0">
           <Image
@@ -29,19 +33,54 @@ export default function Home() {
         <div className="relative z-10 container-ri text-center py-14 md:py-16">
           <div className="max-w-[800px] mx-auto">
             <h1 className="text-[32px] sm:text-[36px] md:text-[64px] leading-[1.2] font-bold text-foreground mb-6">
-              Jalan Tenang Menuju Skor TOEFL Impian Anda.
+              Raih Skor TOEFL Impian Anda dengan Lebih Tenang dan Percaya Diri.
             </h1>
-            <p className="text-[16px] md:text-[18px] leading-[1.7] text-foreground mb-10 md:mb-12 max-w-[600px] mx-auto">
-              Platform belajar terstruktur dan komunitas suportif kami dirancang untuk membangun
-              kepercayaan diri, bukan tekanan.
+            <p className="text-[16px] md:text-[18px] leading-[1.7] text-foreground md:mb-6 max-w-[600px] mx-auto">
+              Pilih jalur belajar yang paling sesuai untuk Anda.
             </p>
-            <div className="flex justify-center">
-              <Button
-                size="lg"
-                className="w-full md:w-auto min-w-[220px] md:min-w-[320px] py-4 px-8 rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-transform"
-              >
-                Coba Tes Diagnostik Gratis
-              </Button>
+
+            {/* Choose Your Path cards (directly under sub-headline) */}
+            <div className="mt-6 md:mt-8 grid gap-4 md:grid-cols-2 text-left">
+              {/* Card 1: Belajar Online */}
+              <Card padding="lg">
+                <CardHeader className="mb-3">
+                  <CardTitle>Belajar Online</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-foreground/80 mb-6">
+                    Platform fleksibel kami untuk belajar mandiri di mana saja, kapan saja.
+                  </p>
+                  <Link href="/kelas-online" className="inline-block">
+                    <Button
+                      size="md"
+                      className="bg-terracotta text-background font-bold px-6 py-3 rounded-lg hover:shadow-md cursor-pointer"
+                    >
+                      Coba Tes Diagnostik Gratis
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              {/* Card 2: Program Asrama */}
+              <Card padding="lg">
+                <CardHeader className="mb-3">
+                  <CardTitle>Program Asrama</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-foreground/80 mb-6">
+                    Pengalaman belajar imersif dan terfokus untuk hasil yang maksimal.
+                  </p>
+                  <Link href="/asrama" className="inline-block">
+                    <Button
+                      size="md"
+                      variant="secondary"
+                      className="bg-padi text-background font-bold px-6 py-3 rounded-lg hover:shadow-md cursor-pointer"
+                    >
+                      Jelajahi Program Asrama
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
@@ -55,13 +94,19 @@ export default function Home() {
           </h2>
           <div className="mx-auto max-w-[800px]">
             <p className="text-[18px] leading-[1.7] text-foreground max-w-[700px] mx-auto mb-12">
-              Kami mengerti. Antara tumpukan buku, aplikasi yang membingungkan, dan tekanan untuk berhasil,
-              mudah sekali merasa cemas dan kehilangan arah. Anda tidak sendirian dalam perjuangan ini.
+              Kami mengerti. Antara tumpukan buku, aplikasi yang membingungkan, dan tekanan untuk berhasil, mudah sekali
+              merasa cemas dan kehilangan arah. Anda tidak sendirian dalam perjuangan ini.
             </p>
             {/* Subtle Padi wave separator */}
             <div className="mt-12 flex justify-center" aria-hidden>
               <svg width="160" height="12" viewBox="0 0 160 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 6 C 20 0, 40 12, 60 6 S 100 0, 120 6 S 140 12, 160 6" stroke="currentColor" strokeWidth="2" className="text-padi" fill="none"/>
+                <path
+                  d="M0 6 C 20 0, 40 12, 60 6 S 100 0, 120 6 S 140 12, 160 6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="text-padi"
+                  fill="none"
+                />
               </svg>
             </div>
           </div>
@@ -71,11 +116,13 @@ export default function Home() {
       {/* 3. Solution: Your Sanctuary for Success */}
       <section className="w-full">
         <div className="container-ri py-[64px] md:py-[120px] space-y-4">
-          <h2 className="text-2xl md:text-3xl font-semibold">Rumah Inggris: Pembelajaran Terstruktur, Kepercayaan Diri yang Hakiki.</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            Rumah Inggris: Pembelajaran Terstruktur, Kepercayaan Diri yang Hakiki.
+          </h2>
           <p className="text-foreground/80 max-w-3xl">
-          Melalui pendekatan yang teratur, dukungan mentor, dan komunitas yang peduli, kami membantu Anda
-          membangun kejelasan langkah—dari diagnosis kebutuhan hingga pencapaian skor. Fokus kami adalah
-          ketenangan dan kemajuan yang konsisten.
+            Melalui pendekatan yang teratur, dukungan mentor, dan komunitas yang peduli, kami membantu Anda membangun
+            kejelasan langkah—dari diagnosis kebutuhan hingga pencapaian skor. Fokus kami adalah ketenangan dan kemajuan
+            yang konsisten.
           </p>
         </div>
       </section>
@@ -83,12 +130,16 @@ export default function Home() {
       {/* 4. How It Works: Your Simple Path Forward */}
       <section className="w-full bg-[#F0F5F0]">
         <div className="container-ri py-[64px] md:py-[120px] space-y-6">
-          <h2 className="text-2xl md:text-3xl font-semibold">Bagaimana Cara Kami Membantu Anda Mencapai Skor Impian?</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            Bagaimana Cara Kami Membantu Anda Mencapai Skor Impian?
+          </h2>
           <div className="grid gap-4 md:grid-cols-3">
             <Card padding="lg">
               <CardHeader className="mb-3">
                 <CardTitle>
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-padi/40 text-foreground">🔎</span>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-padi/40 text-foreground">
+                    🔎
+                  </span>
                   <span className="ml-2 align-middle">Diagnose</span>
                 </CardTitle>
               </CardHeader>
@@ -101,7 +152,9 @@ export default function Home() {
             <Card padding="lg">
               <CardHeader className="mb-3">
                 <CardTitle>
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-padi/40 text-foreground">📖</span>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-padi/40 text-foreground">
+                    📖
+                  </span>
                   <span className="ml-2 align-middle">Learn</span>
                 </CardTitle>
               </CardHeader>
@@ -114,7 +167,9 @@ export default function Home() {
             <Card padding="lg">
               <CardHeader className="mb-3">
                 <CardTitle>
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-padi/40 text-foreground">🎓</span>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-padi/40 text-foreground">
+                    🎓
+                  </span>
                   <span className="ml-2 align-middle">Achieve</span>
                 </CardTitle>
               </CardHeader>
@@ -163,10 +218,10 @@ export default function Home() {
             {/* Desktop: overlapping collage */}
             <div className="hidden md:block relative w-full h-[520px] overflow-visible">
               {/* Main large image fills height; can extend left when wide */}
-              <Reveal className="absolute -left-[100px] top-0 z-0 h-full w-[120%]" delayMs={0}>
+              <Reveal className="absolute -left-[100px] top-0 z-0 h-full w-[110%]" delayMs={0}>
                 <div className="h-full rounded-xl border border-teak/30 overflow-hidden shadow-[0_12px_32px_rgba(0,0,0,0.08)] rotate-[0.75deg]">
                   <Image
-                    src="/dorm1.svg"
+                    src="/study1.jpg"
                     alt="Ruang belajar dorm Rumah Inggris yang hangat dan nyaman"
                     fill
                     priority
@@ -178,7 +233,7 @@ export default function Home() {
               <Reveal className="absolute -right-2 top-[38%] z-10 w-[38%]" delayMs={120}>
                 <div className="aspect-[16/9] rounded-xl border border-teak/30 overflow-hidden shadow-[0_12px_32px_rgba(0,0,0,0.12)] -rotate-[1.25deg]">
                   <Image
-                    src="/dorm2.svg"
+                    src="/study-room.jpg"
                     alt="Sudut baca yang nyaman di dorm Rumah Inggris"
                     fill
                     className="object-cover"
@@ -189,7 +244,7 @@ export default function Home() {
               <Reveal className="absolute -right-4 bottom-0 z-20 w-[56%]" delayMs={240}>
                 <div className="aspect-[16/9] rounded-xl border border-teak/30 overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.14)] rotate-[1.25deg]">
                   <Image
-                    src="/dorm3.svg"
+                    src="/kitchen.jpg"
                     alt="Kebersamaan komunitas belajar di Rumah Inggris"
                     fill
                     className="object-cover"
@@ -205,16 +260,19 @@ export default function Home() {
           </div>
           {/* Right: Story ~40% width */}
           <div className="mt-8 md:mt-0 text-center md:text-left relative z-30">
-            <h2 className="text-[48px] leading-[1.3] font-bold text-foreground">Bukan Sekedar Aplikasi, Kami Adalah Rumah Inggris.</h2>
+            <h2 className="text-[48px] leading-[1.3] font-bold text-foreground">
+              Bukan Sekedar Aplikasi, Kami Adalah Rumah Inggris.
+            </h2>
             <div className="w-[60px] h-[3px] bg-teak my-8 mx-auto md:mx-0" />
             <p className="text-[18px] leading-[1.7] text-foreground mb-8">
-              Dapatkan dukungan yang Anda butuhkan, online dan offline, di lingkungan yang benar-benar peduli. Di Rumah Inggris, kami percaya pembelajaran terbaik terjadi saat teknologi canggih bertemu dengan koneksi manusia yang tulus.
+              Kekuatan terbesar kami adalah komunitas. Kami memadukan kemudahan teknologi online dengan kehangatan
+              interaksi manusia yang tulus di asrama kami. Karena kami percaya, dukungan nyata adalah kunci kesuksesan.
             </p>
             <Button
               variant="secondary"
               className="bg-transparent text-teak border-2 border-teak px-7 py-[14px] rounded-lg hover:bg-teak hover:text-background"
             >
-              Jelajahi Asrama Kami
+              <Link href="/asrama">Jelajahi Asrama Kami</Link>
             </Button>
           </div>
         </div>
@@ -223,13 +281,16 @@ export default function Home() {
       {/* 6. Testimonials: Hear From Those Who Found Their Calm */}
       <section className="w-full bg-[#F0F5F0]">
         <div className="container-ri py-[64px] md:py-[120px]">
-          <h2 className="text-[48px] leading-[1.3] font-bold text-foreground text-center mb-16">Kisah Sukses dari Komunitas Kami.</h2>
+          <h2 className="text-[48px] leading-[1.3] font-bold text-foreground text-center mb-16">
+            Kisah Sukses dari Komunitas Kami.
+          </h2>
           <div className="grid gap-6 md:grid-cols-3">
-            {[1,2,3].map((i) => (
+            {[1, 2, 3].map((i) => (
               <div key={i} className="bg-background p-8 rounded-2xl shadow-[0_6px_24px_rgba(0,0,0,0.06)]">
                 <div className="text-padi text-[48px] leading-none">“</div>
                 <p className="mt-4 italic text-[18px] leading-[1.7] text-foreground">
-                  Rumah Inggris tidak hanya meningkatkan skor saya, tetapi juga menghilangkan kecemasan saya. Saya merasa siap dan percaya diri.
+                  Rumah Inggris tidak hanya meningkatkan skor saya, tetapi juga menghilangkan kecemasan saya. Saya
+                  merasa siap dan percaya diri.
                 </p>
                 <div className="mt-6">
                   <div className="text-[16px] font-semibold text-foreground">Aisha R.</div>
@@ -249,7 +310,9 @@ export default function Home() {
             <p className="text-[18px] leading-[1.7] text-background/90 mb-12">
               Dapatkan analisis pribadi Anda dan langkah pertama yang jelas hari ini. Tidak ada risiko, hanya peluang.
             </p>
-            <Button size="lg" className="min-w-[260px]">Coba Tes Diagnostik Gratis</Button>
+            <Button size="lg" className="min-w-[260px]">
+              Coba Tes Diagnostik Gratis
+            </Button>
           </div>
         </div>
       </section>

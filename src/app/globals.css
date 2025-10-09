@@ -47,3 +47,9 @@ body {
 
 /* Spacing helpers (multiples of 8px) when precise values are needed */
 .space-120-y { padding-top: 120px; padding-bottom: 120px; }
+
+/* Smooth scrolling with reduced-motion fallback */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

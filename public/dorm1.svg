@@ -1,10 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-label="Dorm placeholder: warm study space">
-  <rect width="1400" height="900" fill="#F8F6F2"/>
-  <rect x="80" y="120" width="1240" height="660" rx="28" fill="#BE9A78" opacity="0.15"/>
-  <g fill="#3D4045" opacity="0.25">
-    <rect x="140" y="180" width="420" height="300" rx="20"/>
-    <rect x="140" y="520" width="420" height="140" rx="16"/>
-    <rect x="620" y="200" width="580" height="420" rx="24"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Dorm placeholder: warm study space">
+  <defs>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8F6F2"/>
+      <stop offset="100%" stop-color="#EDE7E2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#warm)"/>
+  <rect x="72" y="72" width="1456" height="856" rx="28" fill="#FFFFFF" stroke="#BE9A78" stroke-width="3"/>
+  <g transform="translate(140,140)">
+    <rect x="0" y="0" width="1040" height="680" rx="24" fill="#EAF1EB"/>
+    <rect x="1080" y="40" width="240" height="200" rx="16" fill="#FFF" stroke="#BE9A78"/>
+    <rect x="1080" y="260" width="240" height="300" rx="16" fill="#FFF" stroke="#BE9A78"/>
   </g>
-  <rect x="620" y="660" width="380" height="18" rx="9" fill="#D97C5D"/>
+  <text x="800" y="960" text-anchor="middle" fill="#3D4045" font-size="28" font-family="Plus Jakarta Sans, Arial, sans-serif">Dorm Placeholder · Collage Main</text>
 </svg>

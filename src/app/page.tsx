@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "@/components/animations/Reveal";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 
@@ -80,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* 4. How It Works: Your Simple Path Forward */}
-      <section className="w-full">
+      <section className="w-full bg-[#F0F5F0]">
         <div className="container-ri py-[64px] md:py-[120px] space-y-6">
           <h2 className="text-2xl md:text-3xl font-semibold">Bagaimana Cara Kami Membantu Anda Mencapai Skor Impian?</h2>
           <div className="grid gap-4 md:grid-cols-3">
@@ -128,59 +129,126 @@ export default function Home() {
       </section>
 
       {/* 5. Our Unfair Advantage: More Than an App, a Home */}
-      <section className="w-full">
-        <div className="container-ri py-[64px] md:py-[120px] grid gap-6 md:grid-cols-2 md:items-center">
-          <div>
-          <Image
-            src="/dorm1.svg"
-            alt="Ruang belajar dorm Rumah Inggris yang hangat dan nyaman"
-            width={700}
-            height={450}
-            className="w-full h-auto rounded-xl border border-teak/30"
-          />
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-2xl md:text-3xl font-semibold">Bukan Sekedar Aplikasi, Kami Adalah Rumah Inggris.</h2>
-            <p className="text-foreground/80">
-              Dapatkan dukungan yang Anda butuhkan—online dan offline—di lingkungan yang benar-benar peduli.
-              Kombinasi komunitas, mentor, dan fasilitas dorm menciptakan rasa tenang untuk belajar mendalam.
-            </p>
-            <div>
-              <Button variant="secondary">Jelajahi Dorm Kami</Button>
+      <section id="dorm" className="w-full overflow-visible">
+        <div className="container-ri py-[64px] md:py-[120px] md:grid md:grid-cols-[3fr_2fr] md:gap-12 md:items-center overflow-visible">
+          {/* Left: Collage ~60% width */}
+          <div className="relative overflow-visible">
+            {/* Mobile: stacked cleanly */}
+            <div className="md:hidden space-y-4">
+              <Image
+                src="/dorm1.svg"
+                alt="Ruang belajar dorm Rumah Inggris yang hangat dan nyaman"
+                width={1000}
+                height={640}
+                className="w-full h-auto rounded-xl border border-teak/30 object-cover"
+              />
+              <div className="grid grid-cols-2 gap-4">
+                <Image
+                  src="/dorm2.svg"
+                  alt="Sudut baca yang nyaman di dorm Rumah Inggris"
+                  width={500}
+                  height={360}
+                  className="w-full h-auto rounded-xl border border-teak/30 object-cover"
+                />
+                <Image
+                  src="/dorm3.svg"
+                  alt="Kebersamaan komunitas belajar di Rumah Inggris"
+                  width={500}
+                  height={360}
+                  className="w-full h-auto rounded-xl border border-teak/30 object-cover"
+                />
+              </div>
             </div>
+
+            {/* Desktop: overlapping collage */}
+            <div className="hidden md:block relative w-full h-[520px] overflow-visible">
+              {/* Main large image fills height; can extend left when wide */}
+              <Reveal className="absolute -left-[100px] top-0 z-0 h-full w-[120%]" delayMs={0}>
+                <div className="h-full rounded-xl border border-teak/30 overflow-hidden shadow-[0_12px_32px_rgba(0,0,0,0.08)] rotate-[0.75deg]">
+                  <Image
+                    src="/dorm1.svg"
+                    alt="Ruang belajar dorm Rumah Inggris yang hangat dan nyaman"
+                    fill
+                    priority
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+              {/* Smaller image top-right (16:9) */}
+              <Reveal className="absolute -right-2 top-[38%] z-10 w-[38%]" delayMs={120}>
+                <div className="aspect-[16/9] rounded-xl border border-teak/30 overflow-hidden shadow-[0_12px_32px_rgba(0,0,0,0.12)] -rotate-[1.25deg]">
+                  <Image
+                    src="/dorm2.svg"
+                    alt="Sudut baca yang nyaman di dorm Rumah Inggris"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+              {/* Smaller image bottom-right, slightly overlapped (16:9) */}
+              <Reveal className="absolute -right-4 bottom-0 z-20 w-[56%]" delayMs={240}>
+                <div className="aspect-[16/9] rounded-xl border border-teak/30 overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.14)] rotate-[1.25deg]">
+                  <Image
+                    src="/dorm3.svg"
+                    alt="Kebersamaan komunitas belajar di Rumah Inggris"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+
+              {/* Tape accents (decorative) */}
+              <div className="pointer-events-none absolute left-4 top-4 w-16 h-2 bg-teak/80 rotate-[12deg] rounded-sm" />
+              <div className="pointer-events-none absolute right-8 top-40 w-14 h-2 bg-teak/70 -rotate-[10deg] rounded-sm" />
+              <div className="pointer-events-none absolute right-16 bottom-10 w-12 h-2 bg-teak/70 rotate-[8deg] rounded-sm" />
+            </div>
+          </div>
+          {/* Right: Story ~40% width */}
+          <div className="mt-8 md:mt-0 text-center md:text-left relative z-30">
+            <h2 className="text-[48px] leading-[1.3] font-bold text-foreground">Bukan Sekedar Aplikasi, Kami Adalah Rumah Inggris.</h2>
+            <div className="w-[60px] h-[3px] bg-teak my-8 mx-auto md:mx-0" />
+            <p className="text-[18px] leading-[1.7] text-foreground mb-8">
+              Dapatkan dukungan yang Anda butuhkan, online dan offline, di lingkungan yang benar-benar peduli. Di Rumah Inggris, kami percaya pembelajaran terbaik terjadi saat teknologi canggih bertemu dengan koneksi manusia yang tulus.
+            </p>
+            <Button
+              variant="secondary"
+              className="bg-transparent text-teak border-2 border-teak px-7 py-[14px] rounded-lg hover:bg-teak hover:text-background"
+            >
+              Jelajahi Asrama Kami
+            </Button>
           </div>
         </div>
       </section>
 
       {/* 6. Testimonials: Hear From Those Who Found Their Calm */}
-      <section className="w-full">
-        <div className="container-ri py-[64px] md:py-[120px] space-y-6">
-          <h2 className="text-2xl md:text-3xl font-semibold">Kisah Sukses dari Komunitas Kami.</h2>
-          <div className="grid gap-4 md:grid-cols-3">
+      <section className="w-full bg-[#F0F5F0]">
+        <div className="container-ri py-[64px] md:py-[120px]">
+          <h2 className="text-[48px] leading-[1.3] font-bold text-foreground text-center mb-16">Kisah Sukses dari Komunitas Kami.</h2>
+          <div className="grid gap-6 md:grid-cols-3">
             {[1,2,3].map((i) => (
-              <Card key={i} padding="lg">
-                <CardContent>
-                  <figure className="space-y-3">
-                    <blockquote className="text-foreground/80">
-                      “Rumah Inggris membantu saya lebih tenang dan fokus. Skor saya naik signifikan tanpa rasa tertekan.”
-                    </blockquote>
-                    <figcaption className="text-sm text-foreground/60">Rini · Pencapaian TOEFL 600+</figcaption>
-                  </figure>
-                </CardContent>
-              </Card>
+              <div key={i} className="bg-background p-8 rounded-2xl shadow-[0_6px_24px_rgba(0,0,0,0.06)]">
+                <div className="text-padi text-[48px] leading-none">“</div>
+                <p className="mt-4 italic text-[18px] leading-[1.7] text-foreground">
+                  Rumah Inggris tidak hanya meningkatkan skor saya, tetapi juga menghilangkan kecemasan saya. Saya merasa siap dan percaya diri.
+                </p>
+                <div className="mt-6">
+                  <div className="text-[16px] font-semibold text-foreground">Aisha R.</div>
+                  <div className="text-[14px] text-teak">Accepted to University of Melbourne</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* 7. Final CTA: Your Journey Starts Here */}
-      <section className="w-full">
-        <div className="container-ri py-[64px] md:py-[120px] text-center space-y-4">
-          <h2 className="text-2xl md:text-3xl font-semibold">Siap Memulai Perjalanan Anda Menuju Skor TOEFL Impian?</h2>
-          <p className="text-foreground/80 max-w-2xl mx-auto">
-            Dapatkan analisis pribadi Anda dan langkah pertama yang jelas hari ini.
-          </p>
-          <div className="pt-2">
+      <section className="w-full bg-foreground">
+        <div className="container-ri py-[64px] md:py-[120px] text-center">
+          <div className="max-w-[800px] mx-auto">
+            <h2 className="text-[48px] leading-[1.3] font-bold text-background mb-8">Siap Memulai Perjalanan Anda?</h2>
+            <p className="text-[18px] leading-[1.7] text-background/90 mb-12">
+              Dapatkan analisis pribadi Anda dan langkah pertama yang jelas hari ini. Tidak ada risiko, hanya peluang.
+            </p>
             <Button size="lg" className="min-w-[260px]">Coba Tes Diagnostik Gratis</Button>
           </div>
         </div>

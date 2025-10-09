@@ -89,11 +89,11 @@ export default function Home() {
       {/* 2. Problem: We Understand Your Struggle */}
       <section className="w-full">
         <div className="container-ri text-center py-[64px] md:py-[120px]">
-          <h2 className="text-[48px] leading-[1.3] font-bold text-foreground mb-8">
+          <h2 className="text-[24px] md:text-[48px] leading-[1.3] font-bold text-foreground mb-8">
             Pernah Merasa Kewalahan Belajar TOEFL Sendiri?
           </h2>
           <div className="mx-auto max-w-[800px]">
-            <p className="text-[18px] leading-[1.7] text-foreground max-w-[700px] mx-auto mb-12">
+            <p className="text-[16px] md:text-[18px] leading-[1.7] text-foreground max-w-[700px] mx-auto mb-12">
               Kami mengerti. Antara tumpukan buku, aplikasi yang membingungkan, dan tekanan untuk berhasil, mudah sekali
               merasa cemas dan kehilangan arah. Anda tidak sendirian dalam perjuangan ini.
             </p>
@@ -260,11 +260,11 @@ export default function Home() {
           </div>
           {/* Right: Story ~40% width */}
           <div className="mt-8 md:mt-0 text-center md:text-left relative z-30">
-            <h2 className="text-[48px] leading-[1.3] font-bold text-foreground">
+            <h2 className="text-[24px] md:text-[48px] leading-[1.3] font-bold text-foreground">
               Bukan Sekedar Aplikasi, Kami Adalah Rumah Inggris.
             </h2>
             <div className="w-[60px] h-[3px] bg-teak my-8 mx-auto md:mx-0" />
-            <p className="text-[18px] leading-[1.7] text-foreground mb-8">
+            <p className="text-[16px] md:text-[18px] leading-[1.7] text-foreground mb-8">
               Kekuatan terbesar kami adalah komunitas. Kami memadukan kemudahan teknologi online dengan kehangatan
               interaksi manusia yang tulus di asrama kami. Karena kami percaya, dukungan nyata adalah kunci kesuksesan.
             </p>
@@ -281,20 +281,20 @@ export default function Home() {
       {/* 6. Testimonials: Hear From Those Who Found Their Calm */}
       <section className="w-full bg-[#F0F5F0]">
         <div className="container-ri py-[64px] md:py-[120px]">
-          <h2 className="text-[48px] leading-[1.3] font-bold text-foreground text-center mb-16">
+          <h2 className="text-[24px] md:text-[48px] leading-[1.3] font-bold text-foreground text-center mb-16">
             Kisah Sukses dari Komunitas Kami.
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {[1, 2, 3].map((i) => (
               <div key={i} className="bg-background p-8 rounded-2xl shadow-[0_6px_24px_rgba(0,0,0,0.06)]">
-                <div className="text-padi text-[48px] leading-none">“</div>
-                <p className="mt-4 italic text-[18px] leading-[1.7] text-foreground">
+                <div className="text-padi text-[36px] md:text-[48px] leading-none">“</div>
+                <p className="mt-4 italic text-[16px] md:text-[18px] leading-[1.7] text-foreground">
                   Rumah Inggris tidak hanya meningkatkan skor saya, tetapi juga menghilangkan kecemasan saya. Saya
                   merasa siap dan percaya diri.
                 </p>
                 <div className="mt-6">
-                  <div className="text-[16px] font-semibold text-foreground">Aisha R.</div>
-                  <div className="text-[14px] text-teak">Accepted to University of Melbourne</div>
+                  <div className="text-[14px] md:text-[16px] font-semibold text-foreground">Aisha R.</div>
+                  <div className="text-[12px] md:text-[14px] text-teak">Accepted to University of Melbourne</div>
                 </div>
               </div>
             ))}
@@ -306,8 +306,10 @@ export default function Home() {
       <section className="w-full bg-foreground">
         <div className="container-ri py-[64px] md:py-[120px] text-center">
           <div className="max-w-[800px] mx-auto">
-            <h2 className="text-[48px] leading-[1.3] font-bold text-background mb-8">Siap Memulai Perjalanan Anda?</h2>
-            <p className="text-[18px] leading-[1.7] text-background/90 mb-12">
+            <h2 className="text-[24px] md:text-[48px] leading-[1.3] font-bold text-background mb-8">
+              Siap Memulai Perjalanan Anda?
+            </h2>
+            <p className="text-[16px] md:text-[18px] leading-[1.7] text-background/90 mb-12">
               Dapatkan analisis pribadi Anda dan langkah pertama yang jelas hari ini. Tidak ada risiko, hanya peluang.
             </p>
             <Button size="lg" className="min-w-[260px]">

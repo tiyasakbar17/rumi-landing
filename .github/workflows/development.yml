@@ -19,25 +19,25 @@ jobs:
         with:
           node-version: "20.18.3"
 
-      - name: 🔨 Build Next App
-        run: |
-          yarn install
-          git reset --hard
-          yarn build  # Build Next.js app
+      # - name: 🔨 Build Next App
+      #   run: |
+      #     yarn install
+      #     git reset --hard
+      #     yarn build  # Build Next.js app
 
-      - name: 📓 Restart Node App
-        run: |
-          mkdir -p tmp
-          echo "$(date)" > tmp/restart.txt
+      # - name: 📓 Restart Node App
+      #   run: |
+      #     mkdir -p tmp
+      #     echo "$(date)" > tmp/restart.txt
 
-      - name: 📂 Sync folders and files to the server
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        with:
-          server: ${{ secrets.FTP_SERVER_DEV }}
-          username: ${{ secrets.FTP_USERNAME_DEV }}
-          password: ${{ secrets.FTP_PASSWORD_DEV }}
-          local-dir: ./ # This points to the build output directory of your Next.js app
-          server-dir: /
-          exclude: |
-            **/.git*
-            **/.git*/**
+      # - name: 📂 Sync folders and files to the server
+      #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      #   with:
+      #     server: ${{ secrets.FTP_SERVER_DEV }}
+      #     username: ${{ secrets.FTP_USERNAME_DEV }}
+      #     password: ${{ secrets.FTP_PASSWORD_DEV }}
+      #     local-dir: ./ # This points to the build output directory of your Next.js app
+      #     server-dir: /
+      #     exclude: |
+      #       **/.git*
+      #       **/.git*/**

@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import clsx from 'clsx';
 import { Button } from '@/components/ui/Button';
 
@@ -35,7 +36,18 @@ export function Navbar() {
       <nav className="container-ri h-20 flex items-center justify-between">
         {/* Left: Logo */}
         <div className="text-[24px] font-bold text-foreground">
-          <Link href="/">Rumah Inggris</Link>
+          <Link href="/" className="inline-flex items-center gap-2">
+            <Image
+              src="/icon-sm.png"
+              alt=""
+              aria-hidden
+              width={64}
+              height={64}
+              className="inline-block rounded"
+              priority
+            />
+            <span>Rumah Inggris</span>
+          </Link>
         </div>
 
         {/* Center: Nav Links (desktop only) */}

@@ -68,8 +68,13 @@ export default function DormPage() {
               merasa dilihat, didukung, dan diberdayakan untuk meraih impian mereka. Di sini, kemajuan tidak dikejar
               dengan panik; ia dibangun secara konsisten, dengan kehangatan komunitas dan bimbingan mentor yang peduli.
             </p>
+
             <div className="mt-8">
-              <div className="text-[20px] italic text-foreground/90">Tiyas Akbar</div>
+              <p className="text-[14px] italic leading-[1.7] text-foreground/90">
+                "Saya berusaha sebisa mungkin mengajak teman-teman yang memiliki visi jauh kedepan untuk belajar bersama
+                sebagai keluarga dengan biaya yang terjangkau bagi mereka"
+              </p>
+              <div className="text-[20px] italic text-foreground/90">Alfatih Novriadi</div>
               <div className="text-[16px] text-foreground/70">Founder, Rumah Inggris</div>
             </div>
           </div>

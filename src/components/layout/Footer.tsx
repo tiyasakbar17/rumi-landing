@@ -18,19 +18,19 @@ export function Footer() {
           <div>
             <div className="text-[16px] font-semibold mb-4">Tautan Cepat</div>
             <ul className="space-y-3 text-[16px]">
-              <li><a href="#courses" className="hover:underline">Courses</a></li>
-              <li><a href="#dorm" className="hover:underline">The Dorm</a></li>
-              <li><a href="#blog" className="hover:underline">Blog</a></li>
-              <li><a href="#contact" className="hover:underline">Contact</a></li>
+              <li><a href="/kelas-online" className="hover:underline">Kelas Online</a></li>
+              <li><a href="/asrama" className="hover:underline">Asrama</a></li>
+              {/* <li><a href="/blog" className="hover:underline">Blog</a></li> */}
+              <li><a href="/kontak-kami" className="hover:underline">Kontak Kami</a></li>
             </ul>
           </div>
           {/* Col 3: Contact */}
           <div>
             <div className="text-[16px] font-semibold mb-4">Kontak</div>
             <ul className="space-y-3 text-[16px]">
-              <li>Jl. Belajar Tenang No. 5, Bandung</li>
-              <li>+62 812-3456-7890</li>
-              <li>hello@rumah-inggris.id</li>
+              <li>Gg. Nusa Indah 2, Way Huwi, Kec. Jati Agung, Kota Bandar Lampung, Lampung 35131</li>
+              <li>+62 812-8491-4453</li>
+              <li>info@rumahinggris.cc</li>
             </ul>
           </div>
           {/* Col 4: Social */}

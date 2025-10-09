@@ -47,7 +47,7 @@ export default function KelasOnlinePage() {
       </section>
 
       {/* 2. Mengapa Platform Kami Berbeda: Fitur Unggulan */}
-      <section className="w-full bg-[#F0F5F0]">
+      <section className="w-full bg-background">
         <div className="container-ri py-[64px] md:py-[120px] space-y-16 md:space-y-24">
           {/* Fitur 1: Diagnostik yang Akurat (image left, text right) */}
           <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center">
@@ -118,7 +118,7 @@ export default function KelasOnlinePage() {
       </section>
 
       {/* 3. Penawaran: Paket Nilai */}
-      <section className="w-full bg-background">
+      <section className="w-full bg-[#F0F5F0]">
         <div className="container-ri py-[64px] md:py-[120px] text-center">
           <h2 className="text-[48px] leading-[1.3] font-bold text-foreground mb-8">Mulai Perjalanan Anda Hari Ini.</h2>
           <div className="max-w-[720px] mx-auto">

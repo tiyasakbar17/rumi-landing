@@ -44,7 +44,7 @@ export function Navbar() {
             { href: '/kelas-online', label: 'Kelas Online' },
             { href: '/asrama', label: 'Asrama' },
             // { href: '#blog', label: 'Blog' },
-            // { href: '#contact', label: 'Contact' },
+            { href: '/kontak-kami', label: 'Kontak Kami' },
           ].map((l) => (
             <li key={l.href}>
               <Link href={l.href} className="transition-colors hover:text-teak">

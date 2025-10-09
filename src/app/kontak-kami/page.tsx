@@ -76,7 +76,7 @@ export default function KontakKamiPage() {
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="filter grayscale"
+                className=""
               />
             </div>
           </div>

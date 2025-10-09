@@ -119,10 +119,9 @@ export function Navbar() {
         <div className="container-ri bg-[#F0F5F0] border-t border-teak/30 rounded-b-xl shadow-[0_8px_24px_rgba(61,64,69,0.08)] transition-transform duration-500 ease-out">
           <ul className="py-4">
             {[
-              { href: '#courses', label: 'Courses' },
-              { href: '#dorm', label: 'The Dorm' },
-              { href: '#blog', label: 'Blog' },
-              { href: '#contact', label: 'Contact' },
+              { href: '/kelas-online', label: 'Kelas Online' },
+              { href: '/asrama', label: 'Asrama' },
+              { href: '/kontak-kami', label: 'Kontak Kami' },
             ].map((l) => (
               <li key={l.href} className="">
                 <Link

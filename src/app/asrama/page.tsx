@@ -31,10 +31,10 @@ export default function DormPage() {
 
         <div className="relative z-10 container-ri flex items-center justify-center text-center py-[64px] md:py-[120px] min-h-[inherit]">
           <div className="max-w-[900px] mx-auto">
-            <h1 className="text-[64px] leading-[1.2] font-bold text-background mb-6">
+            <h1 className="text-[32px] md:text-[64px] leading-[1.2] font-bold text-background mb-6">
               Bukan Sekadar Tempat Belajar. Sebuah Rumah untuk Bertumbuh.
             </h1>
-            <p className="text-[20px] leading-[1.7] text-background">
+            <p className="text-[16px] md:text-[20px] leading-[1.7] text-background">
               Temukan ruang yang dirancang untuk fokus, komunitas, dan kesuksesan setiap siswa.
             </p>
           </div>
@@ -59,9 +59,9 @@ export default function DormPage() {
 
           {/* Right: Copy (60%) */}
           <div>
-            <h2 className="text-[48px] leading-[1.3] font-bold text-foreground">Filosofi Kami</h2>
+            <h2 className="text-[24px] md:text-[48px] leading-[1.3] font-bold text-foreground">Filosofi Kami</h2>
             <div className="w-[60px] h-[4px] bg-teak rounded-full mt-4 mb-6" />
-            <p className="text-[18px] leading-[1.7] text-foreground/90">
+            <p className="text-[16px] md:text-[18px] leading-[1.7] text-foreground/90">
               Saya membangun Rumah Inggris dengan keyakinan sederhana: bahwa pembelajaran sejati tumbuh dalam lingkungan
               yang suportif, bukan penuh tekanan. Sebagai seseorang yang juga melalui tantangan mempelajari bahasa, saya
               ingin membangun lebih dari sekadar kursus—saya ingin membangun sebuah rumah. Tempat di mana setiap siswa
@@ -70,7 +70,7 @@ export default function DormPage() {
             </p>
 
             <div className="mt-8">
-              <p className="text-[14px] italic leading-[1.7] text-foreground/90">
+              <p className="text-[14px] md:text-[16px] italic leading-[1.7] text-foreground/90">
                 "Saya berusaha sebisa mungkin mengajak teman-teman yang memiliki visi jauh kedepan untuk belajar bersama
                 sebagai keluarga dengan biaya yang terjangkau bagi mereka"
               </p>
@@ -84,7 +84,7 @@ export default function DormPage() {
       {/* 3. Fasilitas: Lingkungan yang Dibangun untuk Sukses */}
       <section className="w-full bg-background">
         <div className="container-ri py-[64px] md:py-[120px]">
-          <h2 className="text-[48px] leading-[1.3] font-bold text-foreground text-center mb-8">
+          <h2 className="text-[24px] md:text-[48px] leading-[1.3] font-bold text-foreground text-center mb-8">
             Dirancang untuk Fokus, Kenyamanan, dan Komunitas.
           </h2>
           <div className="max-w-[1140px] mx-auto">

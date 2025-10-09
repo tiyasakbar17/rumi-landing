@@ -13,8 +13,8 @@ export default function KontakKamiPage() {
       {/* 1. Header Halaman */}
       <section className="w-full bg-background">
         <div className="container-ri text-center pt-[120px] pb-[80px]">
-          <h1 className="text-[64px] leading-[1.2] font-bold text-foreground mb-6">Kami Siap Membantu</h1>
-          <p className="text-[20px] leading-[1.7] text-foreground/90 max-w-[750px] mx-auto">
+          <h1 className="text-[32px] md:text-[64px] leading-[1.2] font-bold text-foreground mb-6">Kami Siap Membantu</h1>
+          <p className="text-[14px] md:text-[16px] leading-[1.7] text-foreground/90 max-w-[750px] mx-auto">
             Punya pertanyaan tentang program kami atau ingin menjadwalkan kunjungan? Silakan hubungi kami melalui
             formulir di bawah ini atau kunjungi kami secara langsung.
           </p>
@@ -26,19 +26,19 @@ export default function KontakKamiPage() {
         <div className="container-ri py-[64px] md:py-[120px] md:grid md:grid-cols-2 md:gap-12 md:items-start">
           {/* Left: Formulir Kontak */}
           <div className="order-1">
-            <h3 className="text-[24px] font-semibold text-foreground mb-4">Kirim Pesan kepada Kami</h3>
+            <h3 className="text-[20px] md:text-[24px] font-semibold text-foreground mb-4">Kirim Pesan kepada Kami</h3>
             <ContactForm />
           </div>
 
           {/* Right: Informasi & Lokasi */}
           <div className="order-2 mt-10 md:mt-0">
-            <h3 className="text-[24px] font-semibold text-foreground mb-4">Kunjungi Rumah Kami</h3>
+            <h3 className="text-[20px] md:text-[24px] font-semibold text-foreground mb-4">Kunjungi Rumah Kami</h3>
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-3">
                 <span className="mt-1" aria-hidden>
                   📍
                 </span>
-                <p className="text-[16px] leading-[1.7] text-foreground/90">
+                <p className="text-[14px] md:text-[16px] leading-[1.7] text-foreground/90">
                   Alamat lengkap Rumah Inggris
                   <br />
                   Gg. Nusa Indah 2, Way Huwi,
@@ -52,7 +52,7 @@ export default function KontakKamiPage() {
                 <span className="mt-1" aria-hidden>
                   ✉️
                 </span>
-                <a href="mailto:info@rumahinggris.cc" className="text-[16px] leading-[1.7] text-foreground underline">
+                <a href="mailto:info@rumahinggris.cc" className="text-[14px] md:text-[16px] leading-[1.7] text-foreground underline">
                   info@rumahinggris.cc
                 </a>
               </div>
@@ -60,7 +60,7 @@ export default function KontakKamiPage() {
                 <span className="mt-1" aria-hidden>
                   📞
                 </span>
-                <a href="https://wa.me/6281284914453" className="text-[16px] leading-[1.7] text-foreground underline">
+                <a href="https://wa.me/6281284914453" className="text-[14px] md:text-[16px] leading-[1.7] text-foreground underline">
                   +62 812-8491-4453
                 </a>
               </div>

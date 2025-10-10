@@ -36,7 +36,7 @@ export default function KelasOnlinePage() {
               Semua alat, materi, dan dukungan yang Anda butuhkan, dapat diakses kapan saja, di mana saja.
             </p>
             <div className="flex justify-center">
-              <Link href="/kelas-online/diagnostic" className="inline-block">
+              <Link href="/diagnostic" className="inline-block">
                 <Button size="lg" className="min-w-[260px]">
                   Coba Tes Diagnostik Gratis
                 </Button>
@@ -141,7 +141,7 @@ export default function KelasOnlinePage() {
                     <span>Pelajaran Pertama yang efektif dan langsung bisa diterapkan</span>
                   </li>
                 </ul>
-                <Link href="/kelas-online/daftar" className="inline-block">
+                <Link href="/register" className="inline-block">
                   <Button size="lg" className="min-w-[260px]">Daftar & Mulai Belajar</Button>
                 </Link>
               </CardContent>

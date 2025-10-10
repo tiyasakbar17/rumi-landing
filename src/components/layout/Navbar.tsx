@@ -96,15 +96,17 @@ export function Navbar() {
               }
             />
           </button>
-
-          <Button
-            variant="secondary"
-            className={clsx(
-              'hidden! md:inline-flex! bg-padi text-background border-0 hover:opacity-95 px-6 py-3 h-auto rounded-lg font-bold text-[16px]'
-            )}
-          >
-            Login
-          </Button>
+          <Link href="/login">
+            <Button
+              variant="secondary"
+              className={clsx(
+                'hidden! md:inline-flex! bg-padi text-background border-0 hover:opacity-95 px-6 py-3 h-auto rounded-lg font-bold text-[16px]'
+              )}
+              onClick={() => setOpen(false)}
+            >
+              Login
+            </Button>
+          </Link>
         </div>
       </nav>
 
@@ -138,13 +140,16 @@ export function Navbar() {
             ))}
           </ul>
           <div className="pb-4 pt-1">
-            <Button
-              variant="secondary"
-              className="w-full bg-padi text-background border-0 hover:opacity-95 px-6 py-3 h-auto rounded-lg font-bold text-[16px]"
-              onClick={() => setOpen(false)}
-            >
-              Login
-            </Button>
+            {/* Login CTA move to login page */}
+            <Link href="/login">
+              <Button
+                variant="secondary"
+                className="w-full bg-padi text-background border-0 hover:opacity-95 px-6 py-3 h-auto rounded-lg font-bold text-[16px]"
+                onClick={() => setOpen(false)}
+              >
+                Login
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
